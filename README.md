@@ -2,6 +2,16 @@
 
 This program outputs "admission" results based on user input.
 
+## Usage/Examples
+
+```
+Please enter your Grade Point Average: 3.7
+Enter your Admission Test Score: 96
+Accept
+
+Press any key to close this window . . .
+```
+
 ### Program Logic:
 
 - Allow the user to enter a numeric grade point average (for example, 3.2) and an test score (for example, 75)
