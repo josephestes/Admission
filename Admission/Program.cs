@@ -18,29 +18,28 @@ namespace Admission
     {
         static void Main(string[] args)
         {
-            double MIN_GPA = 3.0;
-            int LOW_TEST_SCORE = 60;
-            int HIGH_TEST_SCORE = 80;
+            const double MIN_GPA = 3.0;
+            const int LOW_TEST_SCORE = 60;
+            const int HIGH_TEST_SCORE = 80;
 
-            double gradePointAverage;
-            int admissionTestScore;
-            string userInput;
-
-            //Prompt for Grade Point Average
+            // Prompt for Grade Point Average
             Write("Please enter your Grade Point Average: ");
-            userInput = ReadLine();
-            gradePointAverage = Convert.ToDouble(userInput);
+            double gradePointAverage = double.Parse(ReadLine());
 
-            //Prompt for Admission Test Score
+            // Prompt for Admission Test Score
             Write("Enter your Admission Test Score: ");
-            userInput = ReadLine();
-            admissionTestScore = Convert.ToInt32(userInput);
+            int admissionTestScore = int.Parse(ReadLine());
 
-            //Calculate and output result
-            if ((gradePointAverage >= MIN_GPA && admissionTestScore >= LOW_TEST_SCORE) || (gradePointAverage < MIN_GPA && admissionTestScore >= HIGH_TEST_SCORE))
+            // Calculate and output result
+            if ((gradePointAverage >= MIN_GPA && admissionTestScore >= LOW_TEST_SCORE) ||
+                (gradePointAverage < MIN_GPA && admissionTestScore >= HIGH_TEST_SCORE))
+            {
                 WriteLine("Accept");
+            }
             else
+            {
                 WriteLine("Reject");
+            }
         }
     }
 }
